@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build --rm -t ceymard/postgres:12.2 .
+docker build --rm -t ceymard/postgres:11.2 .
