@@ -1,5 +1,5 @@
-FROM clkao/postgres-plv8:11-2
+FROM postgres:12.4-alpine
 LABEL Christophe Eymard <christophe.eymard@sales-way.com>
 
 COPY ./root /
-RUN bash /install.sh
+RUN ash /install.sh
