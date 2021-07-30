@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build --rm -t ceymard/postgres-convenient:12.4-alpine .
+docker build --rm -t ceymard/postgres-convenient:13.3-alpine .

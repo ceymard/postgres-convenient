@@ -1,4 +1,4 @@
-FROM postgres:12.4-alpine
+FROM postgres:13.3-alpine
 LABEL Christophe Eymard <christophe.eymard@sales-way.com>
 
 COPY ./root /
