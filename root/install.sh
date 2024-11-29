@@ -3,6 +3,7 @@
 PG_CRON_VERSION="1.5.2"
 PGSQL_HTTP_VERSION="1.5.0"
 POSTGIS_VERSION="3.3.3"
+ENVVAR_VERSION="1.0.0"
 
 apk update
 apk add make clang15 build-base git curl-dev perl libxml2-dev geos-dev proj-dev protobuf-c-dev gdal-dev json-c-dev llvm15
@@ -15,8 +16,14 @@ ln -sf /usr/lib/postgresql/plpython* .
 cd /
 
 mkdir -p /build
-cd /build
 
+cd /build
+wget https://github.com/theory/pg-envvar/archive/refs/tags/v${ENVVAR_VERSION}.tar.gz
+tar xf v$ENVVAR_VERSION.tar.gz
+cd pg-envvar-$ENVVAR_VERSION
+make && make install
+
+cd /build
 wget https://github.com/pramsey/pgsql-http/archive/v$PGSQL_HTTP_VERSION.tar.gz
 tar xf v$PGSQL_HTTP_VERSION.tar.gz
 cd pgsql-http-$PGSQL_HTTP_VERSION
